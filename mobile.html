@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infoviz</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <section id="contact" class="content">
+        <div class="main-text">
+            <img src="logo.jpg" alt="Infoviz Logo">
+            <h2>Welcome to InfoViz</h2>
+        </div>
+        <div class="quote" >
+            Thank you for contacting The InfoViz. Please let us know how we can help you.
+        </div>
+
+        <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="11c233aa-bff8-425c-b2ac-7d842162dd3d">
+
+            <!-- Name Input -->
+            <label for="name">Your Name:</label>
+            <input id="name" type="text" name="name " placeholder="Enter your name" required>
+
+            <!-- Email Input -->
+            <label for="email">Your Email:</label>
+            <input id="email" type="email" name="email " placeholder="Enter your email" required>
+
+            <!-- Work Preference Dropdown -->
+            <label for="work-preference">Work Preference:</label>
+            <select id="work-preference" name="work preference " required>
+                <option value="" disabled selected>Select your work preference</option>
+                <option value="PPT Making (Canva Premium)">PPT Making (Canva Premium)</option>
+                <option value="Portfolio">Portfolio</option>
+                <option value="Poster Making">Poster Making</option>
+                <option value="Word Document">Word Document</option>
+                <option value="Business Cards">Business Cards</option>
+                <option value="Infographics">Infographics</option>
+                <option value="Logos">Logos</option>
+                <option value="Invitations">Invitations</option>
+                <option value="Flyers">Flyers</option>
+            </select>
+
+            <!-- Work or School/College Checkbox Group -->
+            <label>Please select your current status:</label>
+            <div class="checkbox-group">
+                <label>
+                    <input type="radio" name="status" value="Work" required> Work
+                </label>
+                <label>
+                    <input type="radio" name="status" value="School/College" required> School/College
+                </label>
+            </div>
+
+            <!-- Message Input -->
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" placeholder="Send your query" required></textarea>
+
+            <!-- Submit Button -->
+            <div class="btn-bx">
+                <button type="submit" class="btn">Send Message</button>
+            </div>
+        </form>
+    </section>
+</body>
+
+</html>
