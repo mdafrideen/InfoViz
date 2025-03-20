@@ -2,7 +2,7 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #2d3436;
+    background: linear-gradient(45deg, #42a5f5, #00acc1, #26a69a);
     color: #dfe6e9;
 }
 
@@ -10,7 +10,7 @@ body {
     max-width: 650px;
     margin: 60px auto;
     padding: 25px;
-    background-color: #353b48;
+    background: linear-gradient(45deg, #42a5f5, #00acc1, #26a69a);
     color: #ffffff;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     border-radius: 15px;
@@ -33,6 +33,7 @@ body {
 .main-text img {
     width: 110px;
     margin-bottom: 10px;
+    padding-top: 20px;
     animation: fadeIn 1.2s ease;
 }
 
