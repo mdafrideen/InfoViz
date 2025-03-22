@@ -17,27 +17,27 @@
         Thank you for contacting The InfoViz. Please let us know how we can help you.
     </div>
 
-    <div class="content">
+    <div class="content" >
         <form action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="1b1302cd-5e02-4007-9bad-fb7cc7431297">
 
             <!-- Name Input -->
             <label for="name">Your Name:</label>
-            <input id="name" type="text" name="name" placeholder="Enter your name" required>
+            <input id="name" type="text" name="name" placeholder="Enter your name" autocomplete="off" required>
 
             <!-- Phone Input -->
             <label for="phone">Your Phone Number:</label>
             <div class="phone-container">
                 <span name="phone">+91</span>
-                <input name="phone"id="phone" type="tel" name="phone" placeholder="Enter Your Phone Number" pattern="[0-9]{10}" required>
+                <input name="phone"id="phone" type="tel" name="phone" placeholder="Enter Your Phone Number" pattern="[0-9]{10}" autocomplete="off" required>
             </div>
 
             <label for="email">Your Email:</label>
-            <input id="email" type="email" name="email" placeholder="Enter your email" required>
+            <input id="email" type="email" name="email" placeholder="Enter your email" autocomplete="off" required>
 
             <!-- Work Preference Dropdown -->
             <label for="work-preference">Work Preference:</label>
-            <select id="work-preference" name="work preference" required>
+            <select id="work-preference" name="work preference" autocomplete="off" required>
                 <option value="" disabled selected>Select your work preference</option>
                 <option value="PPT Making (Canva Premium)">PPT Making (Canva Premium)</option>
                 <option value="Portfolio">Portfolio</option>
@@ -54,16 +54,16 @@
             <label>Please select your current status:</label>
             <div class="checkbox-group">
                 <label>
-                    <input type="radio" name="status" value="Work" required> Work
+                    <input type="radio" name="status" value="Work" autocomplete="off" required> Work
                 </label>
                 <label>
-                    <input type="radio" name="status" value="School/College" required> School/College
+                    <input type="radio" name="status" value="School/College" autocomplete="off" required> School/College
                 </label>
             </div>
 
             <!-- Message Input -->
             <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" placeholder="Send your query" required></textarea>
+            <textarea id="message" name="message" rows="5" placeholder="Send your query" autocomplete="off" required></textarea>
 
             <!-- Submit Button -->
             <div class="btn-bx">
