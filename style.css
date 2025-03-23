@@ -1,216 +1,292 @@
 body {
-    font-family: 'Roboto', sans-serif;
+    background-color: #212121;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
     margin: 0;
-    padding: 0;
-    background: #1f1c2c;
-    color: #dfe6e9;
 }
 
-.content {
-    max-width: 650px;
-    margin: 60px auto;
-    padding: 25px;
-    background: #928dab;
-    color: #ffffff;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 15px;
+.form-container {
+    width: 90%; 
+    max-width: 400px;
+    background: linear-gradient(#212121, #212121) padding-box,
+                linear-gradient(145deg, transparent 35%, #e81cff, #40c9ff) border-box;
+    border: 2px solid transparent;
+    padding: 24px;
+    font-size: 14px;
+    font-family: inherit;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-sizing: border-box;
+    border-radius: 16px;
+    background-size: 200% 100%;
+    animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.form-container button:active {
+    scale: 0.95;
+}
+
+.form-container .form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-container .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.form-container .form-group label {
+    margin-bottom: 5px;
+    color: #717171;
+    font-weight: 600;
+    font-size: 12px;
+}
+
+.form-container .form-group input,
+.form-container .form-group select,
+.form-container .form-group textarea {
+    width: 100%;
+    padding: 10px 12px;
+    border-radius: 6px;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #414141;
+    font-size: 13px;
+    appearance: none;
+    box-sizing: border-box;
+    height: 40px;
+    margin-bottom: 15px;
+}
+
+.form-container .form-group textarea {
+    height: 120px;
+    resize: vertical;
+}
+
+.form-container .form-group input::placeholder {
+    opacity: 0.5;
+}
+
+.form-container .form-group input:focus,
+.form-container .form-group textarea:focus,
+.form-container .form-group select:focus {
+    outline: none;
+    border-color: #e81cff;
+}
+
+.form-container .form-group select {
+    background: url('data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjNjE2MTYxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgMTQgOCI+PHBhdGggZD0iTTAgMGgxNGwtNyA3eiIvPjwvc3ZnPg==') no-repeat right 10px center;
+    background-size: 12px;
+    padding-right: 32px;
+}
+
+.form-container .form-group select:hover {
+    background-color: #313131;
+}
+
+.form-container .form-submit-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: inherit;
+    color: #717171;
+    font-weight: 600;
+    width: 100%;
+    background: #313131;
+    border: 1px solid #414141;
+    padding: 10px 14px;
+    font-size: inherit;
+    gap: 8px;
+    margin-top: 8px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.form-container .form-submit-btn:hover {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.checkbox-wrapper-12 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-wrapper-12 input[type="checkbox"] {
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #bfbfc0;
+    border-radius: 50%;
+    cursor: pointer;
     position: relative;
-    overflow: hidden;
+}
+
+.checkbox-wrapper-12 input[type="checkbox"]:checked {
+    background-color: #866efb;
+    border-color: #866efb;
+}
+
+.checkbox-wrapper-12 input[type="checkbox"]:checked::after {
+    content: '✔';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 10px;
+}
+
+.radio-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    font-size: 12px;
+}
+
+.radio-group input[type="radio"] {
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border: 2px solid #bfbfc0;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+}
+
+.radio-group input[type="radio"]:checked {
+    background-color: #866efb;
+    border-color: #866efb;
+}
+
+.radio-group input[type="radio"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    background-color: white;
+    border-radius: 50%;
 }
 
 .main-text {
     text-align: center;
-    margin-bottom: 30px;
-    color: #fdcb6e;
-    text-transform: uppercase;
-}
-
-.main-text h2 {
-    font-size: 30px;
-    letter-spacing: 1.5px;
+    margin-bottom: 10px;
 }
 
 .main-text img {
-    width: 180px;
-    margin-bottom: 10px;
-    padding-top: 20px;
-    animation: fadeIn 1.2s ease;
+    width: 100px;
+    height: auto;
+    margin-bottom: 20px;
+    margin-top: 160px;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
-label {
-    color: #1f1c2c;
-    font-weight: bold;
-    text-transform: capitalize;
+.main-text h2 {
+     color: #fdcb6e;
     
-}
-
-input, select, textarea {
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background-color: #2f3640;  
-    font-size: 15px;
-    color: #f5f6fa;
-    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
-}
-
-input:focus, select:focus, textarea:focus {
-    outline: none;
-    background-color: #233444; 
-}
-
-input::placeholder, textarea::placeholder {
-    color: #b2bec3;
-    text-transform: capitalize;
-    
-}
-
-textarea {
-    resize: vertical;
-}
-
-.checkbox-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
-
-.checkbox-group label {
-    display: flex;
-    align-items: center;
-    font-size: 14px;
-    color: #1f1c2c;
-    min-width: 120px;
-}
-
-.checkbox-group input[type="checkbox"] {
-    margin-right: 10px;
-}
-
-.btn-bx {
-    display: flex;
-    justify-content: center;
-    margin-top: 15px;
-}
-
-.btn {
-    background-color: #1f1c2c;
-    color: white;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s, transform 0.3s;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    text-transform: uppercase;
-}
-
-.btn:hover {
-    background-color: #928dab;
-    color: black;
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    margin: 0;
 }
 
 .quote {
     text-align: center;
-    margin-top: 20px;
-    font-size: 18px;
-    color: white;
-    font-style: italic;
-    padding-bottom: 20px;
-    font-style: oblique;
+    color: #717171;
+    font-size: 14px;
+    margin-bottom: 20px;
 }
 
-/* Phone Input with Country Code Styling */
 .phone-container {
     display: flex;
+    align-items: stretch;
+    gap: 8px;
+    width: 100%;
+}
+
+.phone-code {
+    color: #fff;
+    font-size: 14px;
+    padding: 10px 12px;
+    border-radius: 6px;
+    border: 1px solid #414141;
+    display: flex;
     align-items: center;
-    gap: 10px;
+    flex-shrink: 0;
+    height: 40px;
+    box-sizing: border-box;
 }
 
-.phone-container span {
-    background-color: #2f3640;
-    color: #ffffff;
-    padding: 12px;
-    border-radius: 8px;
-    font-size: 15px;
+.phone-container input[type="tel"] {
+    flex-grow: 1;
+    padding: 10px 12px;
+    border-radius: 6px;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid #414141;
+    font-size: 13px;
+    appearance: none;
+    height: 40px;
+    box-sizing: border-box;
 }
 
-.phone-container input {
-    flex: 1;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    background-color: #2f3640;
-    font-size: 15px;
-    color: #f5f6fa;
-    transition: transform 0.3s, background-color 0.3s, box-shadow 0.3s;
-}
-
-.phone-container input:focus {
+.phone-container input[type="tel"]:focus {
     outline: none;
-    background-color: #233444;
+    border-color: #e81cff;
 }
 
 @media (max-width: 768px) {
-    .content {
-        padding: 20px;
+    .form-container {
+        padding: 16px;
     }
-    .main-text h2 {
-        font-size: 26px;
-    }
-    input, select, textarea {
-        padding: 10px;
-        font-size: 14px;
-        max-width: 100%;
-    }
-    .btn {
-        font-size: 14px;
-    }
-    .checkbox-group {
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: flex-start;
-    }
-    .checkbox-group label {
-        width: 100px;
-    }
-}
 
-@media (max-width: 1248px) {
-    .content {
-        max-width: 90%;
-        padding: 20px;
+    .main-text img {
+        margin-bottom: 15px;
     }
-    .main-text h2 {
-        font-size: 26px;
+
+    .phone-code {
+        padding: 8px;
+        font-size: 12px;
     }
-    input, select, textarea {
-        padding: 10px;
-        font-size: 14px;
+
+    .form-container .form-group input,
+    .form-container .form-group select,
+    .form-container .form-group textarea {
+        padding: 8px;
     }
-    .btn {
-        font-size: 14px;
+
+    .form-container .form-submit-btn {
+        padding: 8px;
     }
-    .btn-bx {
-        justify-content: center;
+
+    .quote {
+        font-size: 12px;
     }
 }

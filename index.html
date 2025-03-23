@@ -9,67 +9,63 @@
 </head>
 
 <body>
-    <div class="main-text">
-        <img src="logo.jpg" alt="Infoviz Logo">
-        <h2>Welcome to InfoViz</h2>
-    </div>
-    <div class="quote">
-        Thank you for contacting The InfoViz. Please let us know how we can help you
-    </div>
-
-    <div class="content" >
+    <div class="form-container">
+        <div class="main-text">
+            <img src="logo.jpg" alt="Infoviz Logo">
+            <h2>Welcome to InfoViz</h2>
+        </div>
+        <div class="quote">
+            Thank you for contacting The InfoViz. Please let us know how we can help you
+        </div>
         <form action="https://api.web3forms.com/submit" method="POST">
             <input type="hidden" name="access_key" value="1b1302cd-5e02-4007-9bad-fb7cc7431297">
-
-            <!-- Name Input -->
-            <label for="name">Your Name:</label>
-            <input id="name" type="text" name="name" placeholder="Enter your name" autocomplete="off" required>
-
-            <!-- Phone Input -->
-            <label for="phone">Your Phone Number:</label>
-            <div class="phone-container">
-                <span name="phone">+91</span>
-                <input name="phone"id="phone" type="tel" name="phone" placeholder="Enter Your Phone Number" pattern="[0-9]{10}" autocomplete="off" required>
+            <div class="form-group">
+                <label for="Name">Your Name</label>
+                <input required="" name="Name" id="Name" placeholder="Enter Your Name" type="text" autocomplete="off">
             </div>
-
-            <label for="email">Your Email:</label>
-            <input id="email" type="email" name="email" placeholder="Enter your email" autocomplete="off" required>
-
-            <!-- Work Preference Dropdown -->
-            <label for="work-preference">Work Preference:</label>
-            <select id="work-preference" name="work preference" autocomplete="off" required>
-                <option value="" disabled selected>Select your work preference</option>
-                <option value="PPT Making (Canva Premium)">PPT Making (Canva Premium)</option>
-                <option value="Portfolio">Portfolio</option>
-                <option value="ATS Resume">ATS Resume</option>
-                <option value="Poster Making">Poster Making</option>
-                <option value="Word Document">Word Document</option>
-                <option value="Business Cards">Business Cards</option>
-                <option value="Infographics">Infographics</option>
-                <option value="Logos">Logo</option>
-                <option value="Invitations">Invitations</option>
-                <option value="Flyers">Flyers</option>
-            </select>
-
-            <!-- Work or School/College Checkbox Group -->
-            <label>Please select your current status:</label>
-            <div class="checkbox-group">
-                <label>
-                    <input type="radio" name="status" value="Work" autocomplete="off" required> Work
-                </label>
-                <label>
-                    <input type="radio" name="status" value="School/College" autocomplete="off" required> School/College
-                </label>
+            <div class="form-group">
+                <label for="phonenumber">Phone Number</label>
+                <div class="phone-container">
+                    <span class="phone-code">+91</span>
+                    <input type="tel" id="phonenumber" name="phone" placeholder="Enter Your Number" pattern="[0-9]{10}" required title="Please enter a 10-digit phone number.">
+                </div>
             </div>
-
-            <!-- Message Input -->
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="5" placeholder="Send your query" autocomplete="off" required></textarea>
-
-            <!-- Submit Button -->
-            <div class="btn-bx">
-                <button type="submit" class="btn">Send Message</button>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input required="" name="email" id="email" type="email" placeholder="Enter Your Email" autocomplete="off">
             </div>
+            <div class="form-group">
+                <label for="country">Work Preference:</label>
+                <select name="Work Preference" id="country" required>
+                    <option value="" disabled selected>Select your work preference</option>
+                    <option value="PPT Making (Canva Premium)">PPT Making (Canva Premium)</option>
+                    <option value="Portfolio">Portfolio</option>
+                    <option value="ATS Resume">ATS Resume</option>
+                    <option value="Poster Making">Poster Making</option>
+                    <option value="Word Document">Word Document</option>
+                    <option value="Business Cards">Business Cards</option>
+                    <option value="Infographics">Infographics</option>
+                    <option value="Logos">Logo</option>
+                    <option value="Invitations">Invitations</option>
+                    <option value="Flyers">Flyers</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Please select your current status:</label>
+                <div class="radio-group">
+                    <label>
+                        <input required type="radio" name="current status:" value="School/College" style="margin-top: 10px;"> School/College
+                    </label>
+                    <label>
+                        <input required type="radio" name="current status:" value="Work" style="margin-top: 10px;"> Work
+                    </label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" placeholder="Send your query" autocomplete="off" required></textarea>
+            </div>
+            <button class="form-submit-btn" type="submit">Submit</button>
         </form>
     </div>
 
